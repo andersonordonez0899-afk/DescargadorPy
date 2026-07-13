@@ -7,13 +7,7 @@ class DownloadService:
 
     DOWNLOAD_FOLDER = Path("app/downloads")
 
-    def download(self, url: str, format_id: str):
-
-        print("=" * 50)
-        print("Iniciando descarga")
-        print(f"URL: {url}")
-        print(f"Format ID: {format_id}")
-        print(f"Destino: {self.DOWNLOAD_FOLDER.resolve()}")
+    def download(self, url: str, format_id: str) -> Path:
 
         self.DOWNLOAD_FOLDER.mkdir(
             parents=True,
@@ -27,10 +21,15 @@ class DownloadService:
             self.DOWNLOAD_FOLDER / "%(title)s.%(ext)s"
         )
 
-        print(options)
-
         with yt_dlp.YoutubeDL(options) as ydl:
-            ydl.download([url])
+            
+            info = ydl.extract_info(
+                url,
+                download=True
+            )
 
-        print("Descarga termianda")
-        print("=" * 50)
+            downloaded_file = Path(
+                ydl.prepare_filename(info)
+            )
+
+        return downloaded_file

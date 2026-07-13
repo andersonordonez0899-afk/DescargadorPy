@@ -45,10 +45,12 @@ function showFormats(formats) {
 
     radio.type = "radio";
     radio.name = "format";
-    radio.value = format.format_id;
+
+    radio.value = format.id;
 
     label.appendChild(radio);
-    label.append(` ${format.resolution} (${format.extension})`);
+
+    label.append(` ${format.quality} (${format.extension})`);
 
     item.appendChild(label);
 
@@ -130,11 +132,33 @@ elements.form.addEventListener("submit", async (event) => {
     submitButton.textContent = "Obtener información";
   }
 });
-elements.downloadButton.addEventListener("click", async () => {
+elements.downloadButton.addEventListener("click", () => {
   try {
     const formatId = getSelectedFormat();
-    console.log("URL:", currentVideoUrl);
-    console.log("Formato:", formatId);
+
+    const form = document.createElement("form");
+
+    form.method = "POST";
+    form.action = "/download/";
+
+    const urlInput = document.createElement("input");
+    urlInput.type = "hidden";
+    urlInput.name = "url";
+    urlInput.value = currentVideoUrl;
+
+    const formatInput = document.createElement("input");
+    formatInput.type = "hidden";
+    formatInput.name = "format_id";
+    formatInput.value = formatId;
+
+    form.appendChild(urlInput);
+    form.appendChild(formatInput);
+
+    document.body.appendChild(form);
+
+    form.submit();
+
+    document.body.removeChild(form);
   } catch (error) {
     alert(error.message);
   }
