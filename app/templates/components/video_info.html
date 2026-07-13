@@ -1,22 +1,35 @@
-<section id="video-info" class="d-none">
-  <h2>Información del video</h2>
-  <figure>
-    <img id="video-thumbnail" src="" alt="Miniatura" />
-    <figcaption>Miniatura</figcaption>
-  </figure>
-  <article>
-    <dl>
-      <dt>Titulo</dt>
-      <dd id="video-title"></dd>
-      <dt>Autor</dt>
-      <dd id="video-uploader"></dd>
-      <dt>Duración</dt>
-      <dd id="video-duration"></dd>
-      <dt>Plataforma</dt>
-      <dd id="video-platform"></dd>
-    </dl>
-  </article>
-  <h3>Formatos disponibles</h3>
-  <ul id="video-formats"></ul>
+<section id="video-info" class="video-info d-none">
+  <header class="video-info-header">
+    <h2>Información del video</h2>
+  </header>
+
+  <div class="video-content">
+    <figure class="video-thumbnail">
+      <img id="video-thumbnail" src="" alt="Miniatura" del video />
+    </figure>
+
+    <article class="video-data">
+      <dl>
+        <dt>Título</dt>
+        <dd id="video-title"></dd>
+
+        <dt>Autor</dt>
+        <dd id="video-uploader"></dd>
+
+        <dt>Duración</dt>
+        <dd id="video-duration"></dd>
+
+        <dt>Plataforma</dt>
+        <dd id="video-platform"></dd>
+      </dl>
+    </article>
+  </div>
+
+  <section class="video-formats">
+    <h3>Formatos disponibles</h3>
+
+    <ul id="video-formats"></ul>
+  </section>
+
   <button id="download-button" class="btn">Descargar</button>
 </section>

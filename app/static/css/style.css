@@ -122,3 +122,73 @@ main{
 label{
     font-weight:600;
 }
+
+/* info video */
+
+.video-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.video-info-header {
+  margin-bottom: 1.5rem;
+}
+
+.video-info-header h2 {
+  margin: 0;
+  color: #1f2937;
+}
+
+.video-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.video-thumbnail img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.video-data {
+  flex: 1;
+}
+
+.video-data dl {
+  margin: 0;
+}
+
+.video-data dt {
+  font-weight: 700;
+  margin-top: 1rem;
+  color: #374151;
+}
+
+.video-data dd {
+  margin-left: 0;
+  margin-top: .25rem;
+  color: #6b7280;
+}
+
+.video-formats {
+  margin-bottom: 2rem;
+}
+
+.video-formats h3 {
+  margin-bottom: 1rem;
+}
+
+#video-formats {
+  list-style: none;
+  padding: 0;
+}
+
+#video-formats li {
+  padding: .45rem 0;
+}
