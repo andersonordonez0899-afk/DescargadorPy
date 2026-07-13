@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos de configuración locales
+.env
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Descargas de la aplicación
+app/downloads/*
+!app/downloads/.gitkeep

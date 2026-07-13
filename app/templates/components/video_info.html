@@ -1,19 +1,22 @@
-<section id="video-info" class="mt-5 d-none">
-  <h2 class="h4">Información del video</h2>
+<section id="video-info" class="d-none">
+  <h2>Información del video</h2>
   <figure>
-    <img src="" alt="Miniatura" class="img-fluid mb-3" />
+    <img id="video-thumbnail" src="" alt="Miniatura" />
     <figcaption>Miniatura</figcaption>
   </figure>
   <article>
     <dl>
-      <dt>Titutlo</dt>
-      <dd></dd>
+      <dt>Titulo</dt>
+      <dd id="video-title"></dd>
       <dt>Autor</dt>
+      <dd id="video-uploader"></dd>
       <dt>Duración</dt>
-      <dd></dd>
+      <dd id="video-duration"></dd>
       <dt>Plataforma</dt>
-      <dd></dd>
+      <dd id="video-platform"></dd>
     </dl>
   </article>
-  <button class="btn btn-success">Descargar</button>
+  <h3>Formatos disponibles</h3>
+  <ul id="video-formats"></ul>
+  <button id="download-button" class="btn">Descargar</button>
 </section>
