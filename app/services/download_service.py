@@ -18,7 +18,7 @@ class DownloadService:
 
         options["format"] = format_id
         options["outtmpl"] = str(
-            self.DOWNLOAD_FOLDER / "%(title)s.%(ext)s"
+            self.DOWNLOAD_FOLDER / "%(id)s.%(ext)s"
         )
 
         with yt_dlp.YoutubeDL(options) as ydl:

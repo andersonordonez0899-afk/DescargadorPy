@@ -4,16 +4,16 @@
     box-sizing:border-box;
 }
 :root{
-    --primary:#2563eb;
-    --primary-hover:#1d4ed8;
+    --primary:#00C4FA;
+    --primary-hover:#00A3D1;
 
-    --background:#f8fafc;
+    --background:#05151D;
 
-    --surface:#ffffff;
+    --surface:#00384B;
 
-    --text:#1e293b;
+    --text:#F0F4F6;
 
-    --text-secondary:#64748b;
+    --text-secondary:#b1c3db;
 
     --border:#e2e8f0;
 
@@ -39,6 +39,12 @@ main{
     padding:3rem 0;
 }
 
+.app-logo {
+    display: block;
+    width: clamp(90px, 15vw, 120px);
+    height: auto;
+    margin: 0 auto;
+}
 
 .app-header{
     display:flex;
@@ -65,12 +71,14 @@ main{
 .card{
     display:flex;
     flex-direction:column;
+    text-align: center;
     gap:1.5rem;
     background:var(--surface);
     border:1px solid var(--border);
     border-radius:var(--radius);
     padding:2rem;
     box-shadow:0 1px 3px rgba(15,23,42,.08);
+    color: var(--text-secondary);
 }
 /* input */
 .input{
@@ -128,7 +136,7 @@ label{
 .video-info {
   margin-top: 2rem;
   padding: 1.5rem;
-  background: #ffffff;
+  background: var(--surface);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
@@ -139,7 +147,7 @@ label{
 
 .video-info-header h2 {
   margin: 0;
-  color: #1f2937;
+  color: var(--text);
 }
 
 .video-content {
@@ -167,13 +175,13 @@ label{
 .video-data dt {
   font-weight: 700;
   margin-top: 1rem;
-  color: #374151;
+  color: var(--text);
 }
 
 .video-data dd {
   margin-left: 0;
   margin-top: .25rem;
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .video-formats {
@@ -191,4 +199,7 @@ label{
 
 #video-formats li {
   padding: .45rem 0;
+}
+.footer{
+  text-align: center;
 }

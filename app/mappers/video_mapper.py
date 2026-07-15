@@ -51,7 +51,7 @@ class VideoMapper:
         return Video(
             title=info.get("title", ""),
             uploader=info.get("uploader", ""),
-            duration=info.get("duration", 0),
+            duration=int(float(info.get("duration", 0))),
             thumbnail=info.get("thumbnail", ""),
             platform=info.get("extractor", ""),
             webpage_url=info.get("webpage_url", ""),
